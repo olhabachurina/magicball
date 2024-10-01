@@ -1,38 +1,140 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #ff0000, #000000);
+  animation: gradientTransition 5s infinite;
+}
+
+@keyframes gradientTransition {
+  0% {
+    background: linear-gradient(135deg, #ff0000, #000000);
+  }
+  50% {
+    background: linear-gradient(135deg, #8B0000, #000000); 
+  }
+  100% {
+    background: linear-gradient(135deg, #ff0000, #000000);
+  }
+}
+
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  border: 1px dotted rgb(121, 9, 31);
+  text-align: center;
+  font-family: 'Helvetica Neue', arial;
   color: white;
+  font-weight: 100;
+  background: linear-gradient(90deg, rgb(36, 0, 16) 0%, rgb(121, 9, 9) 44%, rgb(255, 0, 0) 100%);
+  border-radius: 100px;
 }
 
-.App-link {
-  color: #61dafb;
+h1 {
+  font-weight: 100;
+  font-size: 2.0em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.info {
+  font-size: 1.5rem;
+}
+
+input[type=text] {
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  border: 1px solid black;
+  width: 500px;
+  height: 30px;
+  padding: 10px;
+}
+
+input[type=text]:focus {
+  outline: none;
+}
+
+.eight-ball {
+  width: 450px;
+  height: 450px;
+  background-color: black;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+}
+
+.content {
+  background: white;
+  border: 1px solid #333;
+  border-radius: 50%;
+  width: 50%;
+  height: 50%;
+  margin: auto; 
+}
+
+.eight {
+  width: 220px;
+  height: 220px;
+  background: linear-gradient(135deg, #00002c, #0000ff); 
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+  color: white;
+  position: absolute;
+  top: 40%;
+  left: 54%;
+  transform: translate(-58%, -58%);
+  z-index: 2;
+  animation: blueGlow 3s infinite alternate; 
+}
+
+
+@keyframes blueGlow {
+  0% {
+    background: linear-gradient(135deg, #000080, #0000ff); 
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    background: linear-gradient(135deg, #1a1aff, #1a75ff); 
   }
+  100% {
+    background: linear-gradient(135deg, #000080, #0000ff); 
+  }
+}
+
+.answer {
+  padding: 20px;
+  color: rgb(22, 4, 76);
+  letter-spacing: 1px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.error {
+  padding: 20px;
+  border-radius: 50%;
+  color: red;
+  letter-spacing: 1px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.language-switch {
+  margin-bottom: 20px;
+}
+
+.language-switch label {
+  margin: 0 10px;
+  font-size: 1.2rem;
 }
